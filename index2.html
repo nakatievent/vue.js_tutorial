@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <div id="vm">
+      {{ data }}
+    </div>
+
+    <div id="app">
+      <p>{{ foo }}</p>
+      <!-- これは `foo` を更新しなくなります! -->
+      <button v-on:click="foo = 'baz'">Change it</button>
+    </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   <script type="text/javascript" src="script2.js"></script>
+  </body>
+</html>

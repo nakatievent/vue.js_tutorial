@@ -48,3 +48,9 @@ var app6 = new Vue({
     message: 'Hello Vue!'
   }
 })
+
+Vue.component('hello-component', {template: "<p>Hello</p>"})
+
+var app7 = new Vue({
+  el: '#app7'
+})

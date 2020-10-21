@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="session.4.css">
+  </head>
+  <body>
+
+    <div id="app">
+      <h2>
+        Bitcoin Price
+      </h2>
+      <section v-if="hasError">
+        Error.
+      </section>
+      <section v-else>
+        <div v-if="loading">
+          loading...
+        </div>
+        <div v-else>
+          <ul v-cloak>
+            <li v-for="(rate, currency) in bpi">
+              {{ currency }} : {{ rate.rate_float | currencyDecimal }}
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/axios@0.20.0/dist/axios.min.js"></script>
+   <script type="text/javascript" src="session4.js"></script>
+  </body>
+</html>

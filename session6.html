@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="session.6.css">
+  </head>
+  <body>
+
+    <div id="app">
+      <p>
+        {{ message.split('').reverse().join('') }}        
+      </p>
+      <p>
+        {{ reversedMessage }}
+      </p>
+      <p>
+        {{ reversedMessageMethod() }}
+      </p>
+    </div>
+
+    <div id="app2">
+      <p>
+        base price: <input type="text" v-model="basePrice">
+      </p>
+      <p>
+        tax included price: <input type="text" v-model="taxIncludedPrice">
+      </p>
+    </div>
+
+    <div id="app3">
+      <h2>
+        Computed
+      </h2>
+      <ol>
+        <li>{{ computedNumber }}</li>
+        <li>{{ computedNumber }}</li>
+        <li>{{ computedNumber }}</li>
+      </ol>
+      <h2>
+        Methods
+      </h2>
+      <ol>
+        <li>{{ methodsNumber() }}</li>
+        <li>{{ methodsNumber() }}</li>
+        <li>{{ methodsNumber() }}</li>
+      </ol>
+    </div>    
+
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   <script type="text/javascript" src="session6.js"></script>
+  </body>
+</html>

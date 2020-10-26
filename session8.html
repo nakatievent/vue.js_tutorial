@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="session.8.css">
+  </head>
+  <body>
+
+    <div id="app">
+      <p>
+        <input type="text" v-model="keyword">
+      </p>
+      <p>
+        {{ message }}
+      </p>
+      <ul>
+        <li v-for="item in items">
+          <!-- {{ item.title }} -->
+          <a v-bind:href="item.url" target="_blank">{{ item.title }}</a> likes:{{ item.likes_count }}
+        </li>
+      </ul>
+    </div>
+
+
+
+    
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/axios@0.20.0/dist/axios.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+   <script type="text/javascript" src="session8.js"></script>
+  </body>
+</html>

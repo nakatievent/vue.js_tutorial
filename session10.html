@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="session.9.css">
+  </head>
+  <body>
+
+    <div id="app">
+      <p v-if="toggle">
+        YES
+      </p>
+      <p v-else>
+        NO
+      </p>
+    </div>
+
+    <div id="app2">
+      <p v-if="color === 'red'">
+        stop
+      </p>
+      <p v-else-if="color === 'yellow'">
+        caution
+      </p>
+      <p v-else-if="color === 'blue'">
+        Gog
+      </p>
+      <p v-else>
+        Not red/yellow/blue
+      </p>
+    </div>
+
+    <div id="app3">
+      <p v-show="toggle">
+        hello vue.js
+      </p>
+      <p v-show="show">
+        hello vue.js
+      </p>
+    </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   <script type="text/javascript" src="session10.js"></script>
+  </body>
+</html>

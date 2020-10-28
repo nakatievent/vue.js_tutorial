@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="session.9.css">
+  </head>
+  <body>
+
+    <div id="app">
+      <p>
+        {{ message }}
+      </p>
+      <!-- <button v-on:click="counter++">
+        click1
+      </button> -->
+      <button v-on:click="clickHandler($event, 'Vue.js!')">
+        click2
+      </button>
+    </div>
+
+    <div id="app2">
+      <button v-on:click.once="clickHandler">
+        NOW
+      </button>
+      <p>
+        {{ message }}
+      </p>
+    </div>
+
+    <div id="app3">
+      <!-- <input type="text" v-on:keyup.27="clear" v-model="message"> -->
+      <!-- <input type="text" v-on:keyup.esc="clear" v-model="message"> -->
+      <!-- <input type="text" v-on:keyup.esc.space.up="clear" v-model="message"> -->
+      <input type="text" v-on:keyup.ctrl.67="clear" v-model="message">
+      <div v-on:click.shift="clickHandler">
+        Click me!
+      </div>
+      <p>
+        {{ message }}
+      </p>
+    </div>
+
+    <div id="app4">
+      <button v-on:click="clickHandler">
+        Click1
+      </button>
+      <button @click="clickHandler">
+        Click1
+      </button>
+
+    </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   <script type="text/javascript" src="session11.js"></script>
+  </body>
+</html>

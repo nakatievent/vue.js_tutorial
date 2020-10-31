@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="session.9.css">
+  </head>
+  <body>
+
+    <div id="app">
+      <p>
+        {{ message }}
+      </p>
+      <input type="text" v-model="message" value="hogehoge">
+      <pre>
+        {{ $data }}
+      </pre>
+    </div>
+
+    <div id="app2">
+      <pre>{{ message }}</pre>
+      <!-- <textarea>{{ message }}</textarea> -->
+      <textarea v-model="message">{{ message }}</textarea>
+      <pre>{{ $data }}</pre>
+    </div>
+
+    <div id="app3">
+      <input type="checkbox" id="checkbox" v-model="checked">
+      <label for="checkbox">{{ checked }}</label>
+      <pre>{{ $data }}</pre>
+    </div>
+
+    <div id="app4">
+      <input type="checkbox" id="red" value="red" v-model="colors">
+      <label for="red">red</label>
+      <input type="checkbox" id="green" value="green" v-model="colors">
+      <label for="green">green</label>
+      <input type="checkbox" id="blue" value="blue" v-model="colors">
+      <label for="blue">blue</label>
+      <p>
+        {{ colors }}
+      </p>
+    </div>
+
+    <div id="app5">
+      <input type="radio" id="red" value="red" v-model="colors">
+      <label for="red">red</label>
+      <input type="radio" id="green" value="green" v-model="colors">
+      <label for="green">green</label>
+      <input type="radio" id="blue" value="blue" v-model="colors">
+      <label for="blue">blue</label>
+      <p>
+        {{ colors }}
+      </p>
+    </div>
+
+    <div id="app6">
+      <select v-model="selected" multiple>
+        <option disable value="">Please select one</option>
+        <option>red</option>
+        <option>green</option>
+        <option>blue</option>
+      </select>
+      <p>
+        {{ selected }}
+      </p>
+    </div>
+
+    <div id="app7">
+      <input type="text" v-model.lazy="message">
+      <p>
+        {{ message }}
+      </p>
+    </div>
+
+    <div id="app8">
+      <p>
+        <input type="text" v-model.trim="message">
+      </p>
+      <p>
+        <input type="text" v-model="message">
+      </p>
+      <pre>{{ $data }}</pre>
+    </div>
+
+    <div id="app9">
+      <p>
+        <input type="number" v-model.number="age">
+      </p>
+      <p>
+        {{ age + 10 }}
+      </p>
+    </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   <script type="text/javascript" src="session12.js"></script>
+  </body>
+</html>
